@@ -18,13 +18,13 @@ function setup() {
 	b = getRandomInt(100, 200);
 	g = getRandomInt( 55, 155);
 
-	id = currentLocation.replace( 'http://localhost:3001/canvas/', "" );
+	id = currentLocation.replace( 'https://multiusercanvas.herokuapp.com/canvas/', "" );
 
 	canvasid = id;
 
 	console.log(canvasid)
 
-	socket = io.connect('http://localhost:3001/'+canvasid);
+	socket = io.connect('https://multiusercanvas.herokuapp.com/'+canvasid);
 	
 	createCanvas(1200,500);
 
