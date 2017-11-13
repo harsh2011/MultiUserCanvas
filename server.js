@@ -11,7 +11,9 @@ var list = new ArrayList;
 var clist = new ArrayList;
 
 
-var server = app.listen(3001);
+var server = app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 
 app.use(express.static('public'));
 
