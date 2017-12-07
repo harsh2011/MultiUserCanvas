@@ -24,13 +24,13 @@ function setup() {
 	g = getRandomInt( 55, 155);
 
 	id = currentLocation.replace( 'https://multiusercanvas.herokuapp.com/canvas/', "" );
-	id = currentLocation.replace( 'http://localhost:3000/canvas/', "" );
+	//id = currentLocation.replace( 'http://localhost:3000/canvas/', "" );
 
 	canvasid = id;
 
 	console.log(canvasid)
 
-	socket = io.connect('http://localhost:3000/'+canvasid);
+	socket = io.connect('https://multiusercanvas.herokuapp.com/'+canvasid);
 
  	div = document.getElementById("textDiv");  
 
